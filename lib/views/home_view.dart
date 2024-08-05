@@ -27,9 +27,19 @@ class HomeView extends StatelessWidget {
       body: Container(
         height: 85,
         width: 150,
-        decoration: BoxDecoration(borderRadius: BorderRadius.circular(16)),
+        decoration: BoxDecoration(
+          image: const DecorationImage(
+            image: AssetImage('assets/technology.jpeg'),
+            fit: BoxFit.cover,
+          ),
+          color: Colors.amberAccent,
+          borderRadius: BorderRadius.circular(16),
+        ),
         child: Center(
-          child: Text('Sports'),
+          child: Text(
+            'Sports',
+            style: TextStyle(color: Colors.white),
+          ),
         ),
       ),
     );
