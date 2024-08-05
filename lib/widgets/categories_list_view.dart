@@ -10,7 +10,7 @@ class CategoriesListView extends StatelessWidget {
   final List<CategoryModel> categories = const [
     CategoryModel(image: 'assets/business.png', categoryName: 'Business'),
     CategoryModel(
-        image: 'assets/entertaiment.png', categoryName: 'Entertaiment'),
+        image: 'assets/entertaiment.png', categoryName: 'Entertainment'),
     CategoryModel(image: 'assets/general.png', categoryName: 'General'),
     CategoryModel(image: 'assets/health.png', categoryName: 'Health'),
     CategoryModel(image: 'assets/science.png', categoryName: 'Science'),
