@@ -18,13 +18,20 @@ class HomeView extends StatelessWidget {
               style: TextStyle(color: Colors.black),
             ),
             Text(
-              ' Cloud',
+              'Cloud',
               style: TextStyle(color: Colors.orange),
             ),
           ],
         ),
       ),
-      body: Column(),
+      body: Container(
+        height: 85,
+        width: 150,
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(16)),
+        child: Center(
+          child: Text('Sports'),
+        ),
+      ),
     );
   }
 }
