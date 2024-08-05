@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 
-// cached network image
 class NewsTile extends StatelessWidget {
-  const NewsTile({super.key, required this.articleModel});
+  const NewsTile({super.key});
 
-  final ArticleModel articleModel;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -13,7 +11,7 @@ class NewsTile extends StatelessWidget {
         ClipRRect(
             borderRadius: BorderRadius.circular(6),
             child: Image.network(
-              articleModel.image!,
+              'https://c4.wallpaperflare.com/wallpaper/764/505/66/baby-groot-4k-hd-superheroes-wallpaper-preview.jpg',
               height: 200,
               width: double.infinity,
               fit: BoxFit.cover,
@@ -22,7 +20,7 @@ class NewsTile extends StatelessWidget {
           height: 12,
         ),
         Text(
-          articleModel.title,
+          'laptop wallpaper and desktop wallpaper download  for free on all devices - 1920x1080 HD Wallpaper Download',
           maxLines: 2,
           overflow: TextOverflow.ellipsis,
           style: const TextStyle(
@@ -35,7 +33,7 @@ class NewsTile extends StatelessWidget {
           height: 8,
         ),
         Text(
-          articleModel.subTitle ?? '',
+          'By downloading this wallpaper, you agree to our Terms Of Use and Privacy Policy. This image is for personal desktop wallpaper use only, if you are the author and find this image is shared without your permission, DMCA report please Contact Us',
           maxLines: 2,
           style: const TextStyle(color: Colors.grey, fontSize: 14),
         )
