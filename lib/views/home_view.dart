@@ -13,7 +13,7 @@ class HomeView extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title: Row(
+        title: const Row(
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
@@ -27,15 +27,28 @@ class HomeView extends StatelessWidget {
           ],
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
-        child: const Column(
-          children: [
-            CategoriesListView(),
-            SizedBox(height: 35),
-            Expanded(child: NewsListView()),
+      body: const Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16),
+        child: CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(
+              child: CategoriesListView(),
+            ),
+            SliverToBoxAdapter(
+              child: SizedBox(height: 35),
+            ),
+            SliverToBoxAdapter(
+              child: NewsListView(),
+            )
           ],
         ),
+        // child: const Column(
+        //   children: [
+        //     CategoriesListView(),
+        //     SizedBox(height: 35),
+        //     Expanded(child: NewsListView()),
+        //   ],
+        // ),
       ),
     );
   }
