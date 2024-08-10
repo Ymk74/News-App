@@ -27,7 +27,7 @@ class HomeView extends StatelessWidget {
           ],
         ),
       ),
-      body: const Padding(
+      body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 16),
         child: CustomScrollView(
           slivers: [
@@ -37,9 +37,7 @@ class HomeView extends StatelessWidget {
             SliverToBoxAdapter(
               child: SizedBox(height: 35),
             ),
-            SliverToBoxAdapter(
-              child: NewsListView(),
-            )
+            NewsListView(),
           ],
         ),
         // child: const Column(
