@@ -13,6 +13,7 @@ class NewsService {
     List<dynamic> articles = jsonData['articles'];
     // List<Map<String, dynamic>> articles =
     //     jsonData['articles'] as List<Map<String, dynamic>>;
-    print(articles);
+
+    
   }
 }
