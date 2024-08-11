@@ -27,7 +27,7 @@ class HomeView extends StatelessWidget {
           ],
         ),
       ),
-      body: Padding(
+      body: const Padding(
         padding: EdgeInsets.symmetric(horizontal: 16),
         child: CustomScrollView(
           slivers: [
