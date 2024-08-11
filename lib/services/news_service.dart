@@ -5,15 +5,9 @@ class NewsService {
 
   NewsService(this.dio);
 
-  void getSportNews() async {
-    final response = await dio.get(
-        'https://newsapi.org/v2/top-headlines?country=us&apiKey=4cb3201f20c8455999a1220db93cfd5f');
-    print(response);
-  }
-
-  void getGeneralNews() async {
-    final response = await dio.get(
-        'https://newsapi.org/v2/top-headlines?country=us&apiKey=4cb3201f20c8455999a1220db93cfd5f');
-    print(response);
+  getNews() async {
+    Response response = await dio.get(
+      'https://newsapi.org/v2/top-headlines?apiKey=4cb3201f20c8455999a1220db93cfd5f&country=eg&category=general',
+    );
   }
 }
