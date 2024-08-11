@@ -8,7 +8,7 @@ class NewsService {
 
   getNews() async {
     Response response = await dio.get(
-      'https://newsapi.org/v2/top-headlines?apiKey=4cb3201f20c8455999a1220db93cfd5f&country=eg&category=general',
+      'https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=4cb3201f20c8455999a1220db93cfd5f',
     );
     Map<String, dynamic> jsonData = response.data;
     List<dynamic> articles = jsonData['articles'];
