@@ -11,19 +11,22 @@ class NewsListViewBuilder extends StatelessWidget {
     return FutureBuilder(
         future: NewsService(Dio()).getNews(),
         builder: (context, snapshot) {
-          return NewsListView(
-            articles: snapshot.data ?? [],
-          );
+          if (snapshot.hasData) {
+            return NewsListView(
+              articles: snapshot.data!,
+            );
+          } else if (snapshot.hasError) {
+            return const SliverToBoxAdapter(
+              child: Center(
+                child: Text('Oops there was an error, try again later'),
+              ),
+            );
+          } else {
+            return const SliverToBoxAdapter(
+                child: Center(
+              child: CircularProgressIndicator(),
+            ));
+          }
         });
-
-    //   return isLoading
-    //       ? const SliverToBoxAdapter(
-    //           child: Center(
-    //           child: CircularProgressIndicator(),
-    //         ))
-    //       : articles.isNotEmpty ? NewsListView(
-    //           articles: articles,
-    //         ) : const SliverToBoxAdapter(child: Center(child: Text('Oops there was an error, try again later')));
-    // }
   }
 }
