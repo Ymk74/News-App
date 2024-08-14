@@ -5,7 +5,8 @@ import 'package:news_app/services/news_service.dart';
 import 'package:news_app/widgets/news_list_view.dart';
 
 class NewsListViewBuilder extends StatefulWidget {
-  const NewsListViewBuilder({super.key});
+  const NewsListViewBuilder({super.key, required this.sources});
+  final String sources;
 
   @override
   State<NewsListViewBuilder> createState() => _NewsListViewBuilderState();
@@ -16,10 +17,9 @@ class _NewsListViewBuilderState extends State<NewsListViewBuilder> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     future = NewsService(Dio()).getTopHeadlines(
-      sources: 'bbc-news',
+      sources: widget.sources,
     );
   }
 
